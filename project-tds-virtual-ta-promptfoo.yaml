@@ -3,7 +3,7 @@ description: "TDS Virtual TA Project Sample (but not the actual evaluation) Ques
 providers:
   - id: https
     config:
-      url: https://project-1-zeta-sooty.vercel.app/ # Replace this with your API endpoint
+      url: http://localhost:8000/query  # ✅ Correct local endpoint
       method: POST
       headers:
         Content-Type: application/json
@@ -13,6 +13,7 @@ providers:
           "image": "{{ image }}"{% endif %}
         }
       transformResponse: json
+
 
 # Ensure JSON schema
 defaultTest:
